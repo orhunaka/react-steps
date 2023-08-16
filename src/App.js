@@ -7,6 +7,15 @@ const messages = [
 ];
 
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+function Steps() {
   /* Write the default value on the function parameter */
   /* useState is a hook. You can tell this by the name having "use" infront of it. You can only use hook on component function. */
   const [step, setStep] = useState(1);
@@ -23,7 +32,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <div>
       <button className="close" onClick={() => setIsOpen((is) => !is)}>
         &times;
       </button>
@@ -56,6 +65,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
